@@ -1,4 +1,4 @@
-@misc{RN29,
+﻿@misc{RN29,
    title = {https://cellumation.com/},
    year = {2024},
    type = {Web Page}
@@ -488,12 +488,3 @@
    type = {Journal Article}
 }
 
-@article{browne1984classification,
-  title={Classification of flexible manufacturing systems},
-  author={Browne, Jim J and Dubois, Didier and Rathmill, Keith and Sethi, Suresh and Stecke, Kathrin},
-  journal={The FMS magazine},
-  volume={2},
-  number={2},
-  pages={114--117},
-  year={1984}
-}

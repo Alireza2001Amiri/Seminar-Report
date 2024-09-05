@@ -44,10 +44,10 @@ twoside
 \pagenumbering{arabic} % 1, 2, ...
 
 \include{./tex/chapter1}		% فصل اول: مقدمه
-\include{./tex/chapter2}		% فصول دوم: مروری بر مطالعات انجام شده
+%\include{./tex/chapter2}		% فصول دوم: مروری بر مطالعات انجام شده
 %\include{./tex/chapter3}		% فصل سوم: معرفی معماری POLO
 %\include{./tex/chapter4}		% فصل چهارم: نتایج
-\include{./tex/chapter5}		% فصل پنجم: بحث و نتیجه‌گیری
+%\include{./tex/chapter5}		% فصل پنجم: بحث و نتیجه‌گیری
 
 % مراجع
 % اگر از استیل‌های natbib استفاده می‌کنید باید دو خط را در فایل commands.tex تغییر دهید.
@@ -71,16 +71,16 @@ twoside
 \protect\setlength{\cftchapnumwidth}{\mylenapp}}
     
 % دستورات لازم برای شماره‌گذاری صفحات پیوست‌ها بشکل آ-۱ (فعلا با glossaries سازگار نیست)
-%\let\Chapter\chapter
-%\pretocmd{\chapter}{
-%\clearpage
-%\pagenumbering{arabic}
-%\renewcommand*{\thepage}{\rl{\thechapter-\arabic{page}}}}{}{}
+\let\Chapter\chapter
+\pretocmd{\chapter}{
+\clearpage
+\pagenumbering{arabic}
+\renewcommand*{\thepage}{\rl{\thechapter-\arabic{page}}}}{}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%        
 
-\include{./tex/appendix1}		% پیوست اول: آشنایی مقدماتی با لاتک
-\include{./tex/appendix2}		% پیوست دوم: جدول، نمودار و الگوریتم در لاتک
-\include{./tex/appendix3}   	% پیوست سوم: مراجع، واژه‌نامه و حاشیه‌نویسی
+%\include{./tex/appendix1}		% پیوست اول: آشنایی مقدماتی با لاتک
+%\include{./tex/appendix2}		% پیوست دوم: جدول، نمودار و الگوریتم در لاتک
+%\include{./tex/appendix3}   	% پیوست سوم: مراجع، واژه‌نامه و حاشیه‌نویسی
 
 \onehalfspacing
 \cleardoublepage
