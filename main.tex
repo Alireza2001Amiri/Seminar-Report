@@ -14,6 +14,7 @@
 
 % برای استفاده از قلم‌های سری IR Series گزینه irfonts را وارد و برای استفاده از قلم‌های X Series 2 آن را حذف کنید.
 
+
 \documentclass[
 twoside
 % ,openany
@@ -21,6 +22,8 @@ twoside
 ,irfonts
 % ,draft
 ]{./kntu-thesis}
+\usepackage{placeins}
+\usepackage{float}
 
 % فایل commands.tex را مطالعه کنید؛ چون دستورات مربوط به فراخوانی بسته‌ها، فونت و دستورات خاص در این فایل قرار دارد.
 \input{./tex/commands}
@@ -31,9 +34,9 @@ twoside
 \input{./tex/enTitle}
 
 % تنظیمات و تعاریف واژه‌نامه و اختصارات در صورتی که نمی‌خواهید واژه‌نامه‌ها و اختصارات نمایش داده شوند سه خط زیر را کامنت نمایید.
-\input{./tex/glossaries-settings}
-\input{./tex/words}
-\input{./tex/acronyms.tex}
+%\input{./tex/glossaries-settings}
+%\input{./tex/words}
+%\input{./tex/acronyms.tex}
 
 \begin{document}
 
@@ -47,7 +50,7 @@ twoside
 \include{./tex/chapter2}		% فصول دوم: مروری بر مطالعات انجام شده
 %\include{./tex/chapter3}		% فصل سوم: معرفی معماری POLO
 %\include{./tex/chapter4}		% فصل چهارم: نتایج
-%\include{./tex/chapter5}		% فصل پنجم: بحث و نتیجه‌گیری
+\include{./tex/chapter5}		% فصل پنجم: بحث و نتیجه‌گیری
 
 % مراجع
 % اگر از استیل‌های natbib استفاده می‌کنید باید دو خط را در فایل commands.tex تغییر دهید.
