@@ -66,33 +66,33 @@ twoside
 
 % دستورات لازم برای تبدیل «فصل آ» به «پیوست آ» در فهرست مطالب
 
-\addtocontents{toc}{
-\protect\renewcommand\protect\cftchappresnum{\appendixname~}%
-\protect\setlength{\cftchapnumwidth}{\mylenapp}}
+%\addtocontents{toc}{
+%\protect\renewcommand\protect\cftchappresnum{\appendixname~}%
+%\protect\setlength{\cftchapnumwidth}{\mylenapp}}
     
 % دستورات لازم برای شماره‌گذاری صفحات پیوست‌ها بشکل آ-۱ (فعلا با glossaries سازگار نیست)
-\let\Chapter\chapter
-\pretocmd{\chapter}{
-\clearpage
-\pagenumbering{arabic}
-\renewcommand*{\thepage}{\rl{\thechapter-\arabic{page}}}}{}{}
+%\let\Chapter\chapter
+%\pretocmd{\chapter}{
+%\clearpage
+%\pagenumbering{arabic}
+%\renewcommand*{\thepage}{\rl{\thechapter-\arabic{page}}}}{}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%        
 
 %\include{./tex/appendix1}		% پیوست اول: آشنایی مقدماتی با لاتک
 %\include{./tex/appendix2}		% پیوست دوم: جدول، نمودار و الگوریتم در لاتک
 %\include{./tex/appendix3}   	% پیوست سوم: مراجع، واژه‌نامه و حاشیه‌نویسی
 
-\onehalfspacing
-\cleardoublepage
+%\onehalfspacing
+%\cleardoublepage
 % برگرداندن شماره‌بندی صفحات فصول
 \let\chapter\Chapter
 \pagenumbering{tartibi} % اول، دوم، ...
 \baselineskip=.75cm
 
 % چاپ واژه‌نامه‌ها و نمایه: در صورتی که نمی‌خواهید واژه‌نامه‌ها و نمایه نمایش داده شوند سه خط زیر را کامنت نمایید.
-\printglossary
-\cleardoublepage
-\printindex
+%\printglossary
+%\cleardoublepage
+%\printindex
 
 \begin{latin}
 \baselineskip=.6cm
