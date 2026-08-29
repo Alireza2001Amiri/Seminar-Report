@@ -1,0 +1,23 @@
+\begin{table}[htbp]
+\centering
+\caption{Comprehensive Controller Performance Comparison: X-Axis Step Response}
+\label{tab:controller_comparison_comprehensive}
+\begin{tabular}{lccc}
+\toprule
+Metric & Fuzzy PID & Standard PID & Improvement \\
+\midrule
+Rise Time (10-90\%) [s] & 0.3600 & 0.4000 & \textcolor{green!50!black}{+10.0\%} \\
+Peak Time [s] & 5.820 & 5.900 & \textcolor{green!50!black}{+1.4\%} \\
+Settling Time (2\%) [s] & 10.620 & 11.060 & \textcolor{green!50!black}{+4.0\%} \\
+Overshoot [\%] & 1.491 & 2.615 & \textcolor{green!50!black}{+43.0\%} \\
+Steady-State Error [m] & 0.000260 & 0.000644 & \textcolor{green!50!black}{+59.7\%} \\
+Max Absolute Error [m] & 0.1000 & 0.1000 & -0.0\% \\
+RMSE [m] & 0.0095 & 0.0099 & \textcolor{green!50!black}{+4.1\%} \\
+MAE [m] & 0.0015 & 0.0020 & \textcolor{green!50!black}{+26.0\%} \\
+IAE [m·s] & 0.0371 & 0.0501 & \textcolor{green!50!black}{+26.0\%} \\
+ISE [m²·s] & 0.0022 & 0.0024 & \textcolor{green!50!black}{+8.0\%} \\
+ITAE [m·s²] & 0.4406 & 0.6685 & \textcolor{green!50!black}{+34.1\%} \\
+ITSE [m²·s] & 0.0227 & 0.0248 & \textcolor{green!50!black}{+8.5\%} \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -8,19 +8,17 @@
 \latindepartment{Mechatronics Group}
 \latinsubject{Mechatronics Engineering}
 %\latinfield{field}
-\latintitle{Analyzing Design and Implementation methods of Magnetically Levitated Planar Motors}
-\firstlatinsupervisor{Mahdi Aliyari Shooredeli}
-\secondlatinsupervisor{Esmaeil Najafi}
+\latintitle{Design and Implementation of a Simulator for Magnetically Levitated Planar Motor System}
+\firstlatinsupervisor{Dr.Mahdi Aliyari Shooredeli}
 %\firstlatinadvisor{First Advisor}
 %\secondlatinadvisor{Second Advisor}
 \latinname{Alireza}
 \latinsurname{Amiri}
-\latinthesisdate{Summer 2024}
-\latinkeywords{Magnetic levitation, Planar motors, Halbach array, Model Predicting Control, Contactless operation}
+\latinthesisdate{Summer 2026}
+\latinkeywords{Magnetically levitated planar motor, real‑time simulation, fuzzy‑PID control, kinematic singularity, control allocation, ROS~2, Gazebo.}
 \en-abstract{
-Magnetic levitation planar motors (MLPM) offer precise, contactless motion, making them ideal for applications requiring high-accuracy positioning, such as in manufacturing, automation, and robotics. However, designing and optimizing MLPM systems involves overcoming challenges related to system architecture, magnet configuration, control strategies, and modeling techniques, all of which significantly impact the performance and efficiency of these devices.
-This study examines four key aspects of MLPM systems. First, the architecture of the system is analyzed, with a focus on the choice between moving-coil and fixed-coil designs. The findings suggest that fixed-coil designs, where the magnets are placed on the moving component, reduce physical constraints such as electrical connections and improve cooling efficiency, making them more suitable for real-world applications. Second, the design of permanent magnets is explored, specifically comparing disc magnets with Halbach arrays. Halbach arrays, especially in two-dimensional configurations, are found to provide stronger, more concentrated magnetic fields with greater control precision, outperforming traditional magnet designs.
-In the third aspect, control strategies are evaluated, with classical PID controllers being compared to more advanced techniques like Model Predictive Control (MPC) and AI-based methods such as Gated Recurrent Units (GRU). While PID controllers are effective for basic applications, advanced control techniques leveraging system dynamics and machine learning demonstrate improved stability and reduced error in controlling MLPM systems.
-Finally, the study explores modeling approaches, contrasting analytical methods with numerical techniques like finite element modeling (FEM). The analysis reveals that while analytical models provide a foundational understanding, numerical simulations, particularly FEM, offer greater accuracy and flexibility in designing and validating complex MLPM systems.
-In conclusion, this research highlights the advantages of using fixed-coil architecture, Halbach magnet arrays, advanced control strategies, and numerical modeling techniques for optimizing MLPM performance, paving the way for their broader application in precision-driven industries.
+Magnetically levitated planar motors (MLPMs) offer contactless motion, high precision, and compatibility with vacuum and cleanroom environments, making them ideal for advanced industries such as flexible manufacturing, photolithography, and biotechnology. However, research and development in this field are severely constrained by the high cost and hardware complexity of building physical prototypes. This thesis aims to create a reliable, real‑time simulation platform for MLPMs—a virtual testbed that enables the design, implementation, and evaluation of control algorithms without the need for physical hardware.
+To this end, an integrated framework was developed, combining the Gazebo Harmonic physics engine, the ROS~2 Jazzy robotic middleware, and MATLAB/Simulink. The dynamic and kinematic model of the system was derived from analytical force and torque equations and cast into the wrench–current mapping matrix $\Gamma$. Current allocation was performed using the Moore–Penrose pseudo‑inverse, with realistic hardware constraints enforced: a current saturation limit of $\pm9$~A and a slew‑rate limit of $80$~A/s. A fuzzy‑PID controller with 25 rules and Gaussian membership functions was designed to adaptively tune the proportional, integral, and derivative gains in real time. A two‑phase state machine ensured a safe transition from the ground‑contact phase to levitation, and a quintic‑polynomial trajectory planner generated smooth position, velocity, and acceleration references.
+Experimental results showed that the fuzzy‑PID controller achieved a settling time of approximately $1.12$~s and an overshoot below $1.25\%$ on the horizontal axes. In direct comparison with a fixed‑gain classical PID, the fuzzy‑PID reduced overshoot by $43\%$ and steady‑state error by $59.7\%$. Singularity analysis using the condition number of $\Gamma$ identified a safe operating region around $\gamma \approx \pi/4$ with a minimum condition number of $18$, and the entire horizontal workspace remained well‑conditioned (condition number $< 34$). In Manhattan‑trajectory tests, the system tracked multi‑step planar paths with near‑zero error when a segment time of $1.5$~s was allocated.
+The developed platform bridges the gap between theoretical control design and physical implementation, providing a foundation for future hardware deployment with minimal architectural changes.
 }
