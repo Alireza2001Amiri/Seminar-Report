@@ -58,7 +58,7 @@
 
 ماتریس $A$ از شش بلوک انتگرال‌گیر مرتبه‌ی دوم تشکیل شده است، درایه‌های متناظر $B$ برابر $1/m$ برای حرکت انتقالی و $1/I_{jj}$ برای حرکت دورانی هستند، $C=I_{12}$ و $D=0_{12\times6}$ است. بردار $\mathbf g$ تنها در مؤلفه‌ی شتاب قائم مقدار $-g$ دارد. پارامترهای مدل مرجع در جدول \ref{tab:method-reference-dynamics} آمده‌اند.
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
 	\centering
 	\caption{پارامترهای دینامیکی بخش متحرک در شبیه‌سازی مرجع}
 	\label{tab:method-reference-dynamics}
@@ -144,7 +144,7 @@
 
 ضرایب عددی استفاده‌شده در این مرحله در جدول \ref{tab:method-parameters} گزارش شده‌اند.
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
 	\centering
 	\caption{پارامترهای مدل الکترومغناطیسی سامانه‌ی مرجع}
 	\label{tab:method-parameters}
@@ -244,9 +244,7 @@
 
 \begin{figure}[htbp]
 	\centering
-	\fbox{\parbox[c][4.2cm][c]{0.78\textwidth}{\centering
-	جای‌نگهدار نمودار مسیر مرتبه‌ی پنجم\\[2mm]
-	\small نمودار نهایی باید با مقیاس جابه‌جایی و سرعت نمونه‌ی فیزیکی بازتولید شود.}}
+	\includegraphics[width=0.95\textwidth]{img/trajectory_generation_x.png}
 	\caption{نمونه‌ی اصلاح‌شده‌ی مسیر مرجع مرتبه‌ی پنجم و مشتق‌های آن}
 	\label{fig:method-quintic-placeholder}
 \end{figure}
@@ -282,7 +280,7 @@
 
 در این معادله، $c_i^j$ مرکز تابع عضویت و $\sigma_i^j$ انحراف معیار آن است. مقادیر عددی این پارامترها در جدول \ref{tab:method-input-mfs} آمده‌اند. انتخاب تابع گوسی، تغییر پیوسته‌ی درجات عضویت و در نتیجه تغییر نرم خروجی فازی را فراهم می‌کند.
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
 	\centering
 	\caption{پارامترهای توابع عضویت گوسی برای هر دو ورودی فازی}
 	\label{tab:method-input-mfs}
@@ -315,7 +313,7 @@
 
 پایگاه استنتاج شامل 25 ترکیب دو ورودی است و ماتریس‌های قواعد سه خروجی در جدول \ref{tab:method-fuzzy-rules} آمده‌اند.
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
 	\centering
 	\small
 	\caption{پایگاه قواعد فازی برای تنظیم مؤلفه‌های \lr{PID}}
@@ -347,7 +345,7 @@
 
 خروجی‌های تک‌عضوی و مقدار عددی متناظر آن‌ها در جدول \ref{tab:method-output-mfs} تعریف شده‌اند.
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
 	\centering
 	\caption{مقادیر عددی خروجی‌های تک‌عضوی سامانه‌ی فازی}
 	\label{tab:method-output-mfs}
@@ -394,7 +392,7 @@
 
 ضرایب اصلی مرحله‌ی شبیه‌سازی در جدول \ref{tab:method-fuzzy-gains} آمده‌اند. این ضرایب برای محورهای انتقالی و دورانی جداگانه تنظیم شدند، در حالی که ساختار عضویت و قواعد مشترک باقی ماند.
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
 	\centering
 	\small
 	\caption{ضرایب نرمال‌سازی و مقیاس‌بندی کنترل‌کننده‌ی فازی در مرحله‌ی شبیه‌سازی}
@@ -487,7 +485,7 @@
 
 مرحله‌ی نخست یک حلقه‌ی کامل برای آزمودن کنترل و ارتباط فراهم کرد، اما جایگزین مدل‌سازی نمونه‌ی ساخته‌شده نبود. افزون بر مدل مرجع، در بخشی از فرایند توسعه یک آرایش دوازده‌سیم‌پیچه برای بررسی اولیه‌ی فضای کار مطالعه شد. این مطالعه پیش از تثبیت آرایش نهایی سخت‌افزار انجام شده بود. سه پیکربندی مورد استفاده و نقش هر یک در جدول \ref{tab:method-configuration-evolution} تفکیک شده‌اند.
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
 	\centering
 	\scriptsize
 	\caption{تفکیک پیکربندی‌های عملگر در مراحل مختلف پژوهش}
@@ -501,11 +499,20 @@
 	\end{tabular}
 \end{table}
 
+% پس از معرفی رزبری‌پای در بخش سخت‌افزار پردازشی
+رزبری‌پای مورد استفاده در شکل~\ref{fig:method-raspberry-pi} نشان داده شده است.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.75\textwidth]{img/physical/raspberry_pi.jpg}
+	\caption{رزبری‌پای مورد استفاده در نمونه‌ی فیزیکی}
+	\label{fig:method-raspberry-pi}
+\end{figure}
 نتایج عددی مطالعه‌ی دوازده‌سیم‌پیچه را نمی‌توان به آرایش نهایی هشت‌کاناله تعمیم داد، زیرا حذف یا جابه‌جایی هر ستون، رتبه، مقادیر منفرد و جهت‌های قابل تولید ماتریس عملگر را تغییر می‌دهد. بنابراین تحلیل نمونه‌ی فیزیکی باید با ماتریس هشت‌ستونه‌ی همان نمونه تکرار شود.
 
 هنگام انتقال به سخت‌افزار، رابط‌های سطح بالا شامل بردار وضعیت شش‌درجه‌آزادی، پیچش مطلوب، بردار جریان شانزده‌عضوی، پیام‌های مسیر و ساختار ثبت داده حفظ شدند. در مقابل، اجزای وابسته به فرایند بر اساس واقعیت فیزیکی بازتعریف شدند. مهم‌ترین تفاوت‌های مدل مرجع و نمونه‌ی فیزیکی در جدول \ref{tab:method-stage-comparison} خلاصه شده‌اند.
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
 	\centering
 	\scriptsize
 	\caption{تفاوت‌های مرحله‌ی شبیه‌سازی مرجع و نمونه‌ی فیزیکی}
@@ -543,27 +550,19 @@
 
 \begin{figure}[htbp]
 	\centering
-	\setlength{\tabcolsep}{9pt}
-	\renewcommand{\arraystretch}{1.5}
-	\begin{tabular}{|c|c|c|c|}
-		\hline
-		1 & \textbf{2} & 3 & 4\\ \hline
-		5 & \textbf{6} & \textbf{7} & \textbf{8}\\ \hline
-		\textbf{9} & \textbf{10} & \textbf{11} & 12\\ \hline
-		13 & 14 & \textbf{15} & 16\\ \hline
-	\end{tabular}
-	\caption{شماره‌گذاری آرایه‌ی $4\times4$ استاتور؛ شماره‌های پررنگ سیم‌پیچ‌های فعال را نشان می‌دهند}
-	\label{fig:method-active-coil-layout}
+	\includegraphics[width=0.8\textwidth]{img/physical/coil_arrangment}
+	\caption{چیدمان سیم پیج ها}
+	\label{fig:method-physical-coil-arrangment}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	\fbox{\parbox[c][4.2cm][c]{0.75\textwidth}{\centering جای‌نگهدار عکس سکوی فیزیکی سیم‌پیچ‌ها}}
-	\caption{استاتور شانزده‌سیم‌پیچه و سازه‌ی نگهدارنده‌ی پلکسی‌گلاس}
+	\includegraphics[width=0.8\textwidth]{img/physical/12 Coil Stator}
+	\caption{استاتور دوازده‌سیم‌پیچه}
 	\label{fig:method-physical-coil-platform-placeholder}
 \end{figure}
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
 	\centering
 	\caption{مختصات مدل و ترتیب سخت‌افزاری سیم‌پیچ‌های فعال}
 	\label{tab:method-active-coordinates}
@@ -583,7 +582,7 @@
 
 \subsection{هندسه و مشخصه‌ی الکتریکی سیم‌پیچ‌ها}
 
-مدل هندسی هر سیم‌پیچ از ابعاد خارجی $68\times68\,\mathrm{mm}$، دهانه‌ی داخلی $20\times20\,\mathrm{mm}$، قطر هادی بدون عایق $0.8\,\mathrm{mm}$ و گام هادی عایق‌شده $0.85\,\mathrm{mm}$ استفاده می‌کند. مقاومت نامی در مدل $5.75\,\Omega$ و ضریب تراکم سیم‌پیچی $0.72$ است. ابعاد فوق پارامترهای نسخه‌ی نهایی مدل مغناطیسی‌اند؛ ادعای بهینه‌سازی ابعاد، به علت در دسترس نبودن کد و خروجی مطالعه‌ی اولیه، در روش حاضر به کار نمی‌رود.
+مدل هندسی هر سیم‌پیچ از ابعاد خارجی $68\times68\,\mathrm{mm}$، دهانه‌ی داخلی $20\times20\,\mathrm{mm}$، قطر هادی بدون عایق $0.8\,\mathrm{mm}$ و گام هادی عایق‌شده $0.85\,\mathrm{mm}$ استفاده می‌کند. مقاومت نامی در مدل $5.75\,\Omega$ و ضریب تراکم سیم‌پیچی $0.72$ است. ابعاد فوق پارامترهای نسخه‌ی نهایی مدل مغناطیسی‌ هستند. 
 
 برای لحاظ‌کردن ناهمسانی ساخت، مقاومت، اندوکتانس و ضریب کیفیت هر شانزده سیم‌پیچ اندازه‌گیری شد. هادی سیم‌پیچ‌ها آلومینیومی است. به‌جای فرض تعداد دور یکسان، طول هادی با استفاده از مقاومت ویژه‌ی آلومینیوم و مطابق معادله‌ی \ref{eq:method-wire-length} برآورد شد.
 
@@ -606,7 +605,7 @@
 
 برای سیم‌پیچ نامی $5.75\,\Omega$، طول هادی $102.492\,\mathrm m$، تعداد دور $582.339$ و ضخامت بسته $16.940\,\mathrm{mm}$ به دست آمد. این مقادیر اندازه‌گیری مستقیم نیستند و تنها برای ساخت مدل سیم‌پیچ محدود استفاده می‌شوند. مقادیر تخمینی سیم‌پیچ‌های فعال در جدول \ref{tab:method-active-coil-properties} آمده است.
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
 	\centering
 	\scriptsize
 	\caption{مشخصه‌های الکتریکی و پارامترهای تخمینی سیم‌پیچ‌های فعال}
@@ -635,17 +634,11 @@
 
 \begin{figure}[htbp]
 	\centering
-	\fbox{\parbox[c][4.2cm][c]{0.75\textwidth}{\centering جای‌نگهدار عکس آهنرباها و آرایه‌ی هالباخ متحرک}}
+	\includegraphics[width=0.8\textwidth]{img/physical/halbach_array}
 	\caption{اجزای آهنربایی و آرایه‌ی هالباخ دوبعدی متحرک}
 	\label{fig:method-halbach-photo-placeholder}
 \end{figure}
 
-\begin{figure}[htbp]
-	\centering
-	\fbox{\parbox[c][4.2cm][c]{0.75\textwidth}{\centering جای‌نگهدار عکس کامل سامانه‌ی آزمایشگاهی}}
-	\caption{نمای کلی سکوی آزمایش فیزیکی موتور صفحه‌ای با شناوری مغناطیسی}
-	\label{fig:method-complete-device-placeholder}
-\end{figure}
 
 \section{مدل مغناطیسی ویژه‌ی نمونه‌ی فیزیکی}
 \label{sec:method-physical-magnetic-model}
@@ -678,16 +671,28 @@
 
 \begin{figure}[htbp]
 	\centering
-	\fbox{\parbox[c][4.4cm][c]{0.76\textwidth}{\centering جای‌نگهدار خروجی نماینده‌ی مدل هندسی \lr{Magpylib}}}
-	\caption{نمونه‌ی میدان یا توزیع نیروی محاسبه‌شده با مدل هندسی \lr{Magpylib}}
-	\label{fig:method-magpylib-output-placeholder}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/physical/mover_field}
+		
+		\small (الف) میدان مغناطیسی آرایه‌ی متحرک
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/physical/coil_field}
+		
+		\small (ب) میدان مغناطیسی سیم‌پیچ
+	\end{minipage}
+	\caption{خروجی مدل هندسی \lr{Magpylib} برای میدان مغناطیسی آرایه‌ی متحرک و سیم‌پیچ}
+	\label{fig:method-magpylib-output}
 \end{figure}
 
 \subsection{دامنه و طراحی داده‌های شناسایی}
 
 مدل جانشین باید در دامنه‌ی کاری موردنظر رفتار مدل \lr{Magpylib} را بازتولید کند. دامنه‌ی شناسایی در جدول \ref{tab:method-identification-domain} تعریف شد.
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
 	\centering
 	\caption{دامنه‌ی وضعیت برای تولید داده‌های مدل جانشین}
 	\label{tab:method-identification-domain}
@@ -724,7 +729,8 @@
 	\label{eq:method-surrogate-local-coordinates}
 \end{align}
 
-زاویه‌ی محلی $\phi_k$ نیز مطابق معادله‌ی \ref{eq:method-surrogate-local-angle} به زاویه‌ی متحرک وابسته است.
+زاویه‌ی محلی $\phi_k$ نیز مطابق معادله‌ی
+ \ref{eq:method-surrogate-local-angle} به زاویه‌ی متحرک وابسته است.
 
 \begin{equation}
 	\phi_k=\psi-\frac{\pi}{8}+k_\phi\sin(4\psi).
@@ -761,7 +767,16 @@
 
 \subsection{معماری دوربین و کالیبراسیون درونی}
 
-در حلقه‌ی فیزیکی، وضعیت متحرک با یک دوربین متصل به رزبری‌پای و نشانگرهای \lr{AprilTag} تخمین زده می‌شود. دوربین در مرکز سازه‌ی بالاسری نصب شده و کل سطح سیم‌پیچ و نشانگرهای مرجع را مشاهده می‌کند. گره بینایی از رابط \lr{Picamera2} با تصویر $640\times480$، قالب \lr{BGR888} و نرخ اسمی $30$ فریم‌برثانیه استفاده می‌کند. زمان نوردهی $40000\,\mu\mathrm s$، بهره‌ی آنالوگ 10، خانواده‌ی نشانگر \lr{tag36h11} و طول ضلع سیاه نشانگر $0.05\,\mathrm m$ است. تصویر نمایشی پس از محاسبه‌ی هندسی 180 درجه می‌چرخد؛ بنابراین این دوران روی دستگاه مختصات تخمین وضعیت اثر ندارد.
+در حلقه‌ی فیزیکی، وضعیت متحرک با یک دوربین متصل به رزبری‌پای و نشانگرهای \lr{AprilTag} تخمین زده می‌شود. دوربین در مرکز سازه‌ی بالاسری نصب شده و کل سطح سیم‌پیچ و نشانگرهای مرجع را مشاهده می‌کند. گره بینایی از رابط \lr{Picamera2} با تصویر $640\times480$، قالب \lr{BGR888} و نرخ اسمی $30$ فریم‌برثانیه استفاده می‌کند. زمان نوردهی $40000\,\mu\mathrm s$، بهره‌ی آنالوگ 10، خانواده‌ی نشانگر \lr{tag36h1.81} و طول ضلع سیاه نشانگر $0.05\,\mathrm m$ است. تصویر نمایشی پس از محاسبه‌ی هندسی 180 درجه می‌چرخد؛ بنابراین این دوران روی دستگاه مختصات تخمین وضعیت اثر ندارد.
+% پس از پاراگراف نخست زیربخش معماری دوربین و کالیبراسیون درونی
+دوربین مورد استفاده برای اندازه‌گیری وضعیت در شکل~\ref{fig:method-camera} نشان داده شده است.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.75\textwidth]{img/physical/camera.jpg}
+	\caption{دوربین مورد استفاده برای اندازه‌گیری وضعیت متحرک}
+	\label{fig:method-camera}
+\end{figure}
 
 کالیبراسیون درونی با صفحه‌ی \lr{ChArUco} شامل $9\times6$ مربع، طول مربع $0.029\,\mathrm m$ و فرهنگ \lr{DICT\_6X6\_250} انجام شد. مجموعه‌ی ذخیره‌شده شامل 100 تصویر پذیرفته‌شده از 8235 فریم پردازش‌شده است و طول نشانگر کالیبراسیون $0.019\,\mathrm m$ در نظر گرفته شد. ماتریس درونی حاصل در معادله‌ی \ref{eq:method-camera-matrix} آمده است.
 
@@ -785,7 +800,7 @@
 
 چهار نشانگر ثابت با شناسه‌های 10 تا 13 دستگاه مختصات جهان را تعریف می‌کنند. چهار نشانگر 0 تا 3 نیز روی متحرک نصب شده‌اند. مختصات مراکز و دوران درون‌صفحه‌ای آن‌ها در جدول \ref{tab:method-tag-layouts} آمده است. محور $x$ جهان به راست، محور $y$ رو به بالای صفحه‌ی کار و محور $z$ رو به بیرون صفحه تعریف شده است.
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
 	\centering
 	\scriptsize
 	\caption{هندسه‌ی نشانگرهای مرجع و متحرک}
@@ -803,6 +818,27 @@
 		متحرک&3&$(-0.076,-0.076,0)$&$+\pi/2$\\ \hline
 	\end{tabular}
 \end{table}
+
+شکل~\ref{fig:method-apriltag-detection} نمونه‌ی تشخیص نشانگرهای ثابت و متحرک را در تصاویر دوربین نشان می‌دهد. گوشه‌های تصویری نشانگرهای شناسایی‌شده، همراه با هندسه‌ی معلوم آن‌ها، ورودی مسئله‌ی تخمین وضعیت را تشکیل می‌دهند.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/physical/stator_april_tags.png}
+		\par\smallskip
+		{\small الف) تشخیص نشانگرهای ثابت فضای کار}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{img/physical/mover_april_tags.png}
+		\par\smallskip
+		{\small ب) تشخیص نشانگرهای نصب‌شده روی متحرک}
+	\end{minipage}
+	\caption{نمونه‌ی تشخیص نشانگرهای \lr{AprilTag} در تصاویر دوربین برای ثبت دستگاه مرجع جهان و تخمین وضعیت متحرک نسبت به آن.}
+	\label{fig:method-apriltag-detection}
+\end{figure}
 
 برای هر نشانگر دیده‌شده، چهار گوشه‌ی تصویری با چهار نقطه‌ی سه‌بعدی حاصل از هندسه‌ی جدول متناظر می‌شوند. همه‌ی تطابق‌های معتبر یک مجموعه، در یک مسئله‌ی تخمین وضعیت مشترک وارد می‌شوند. در مرحله‌ی ثبت جهان، تبدیل صفحه‌ی ثابت نسبت به دوربین $(R_{wc},t_{wc})$ و در زمان ردیابی، تبدیل صفحه‌ی متحرک نسبت به دوربین $(R_{pc},t_{pc})$ به دست می‌آید. وضعیت متحرک در دستگاه جهان مطابق معادله‌ی \ref{eq:method-camera-world-transform} محاسبه می‌شود.
 
@@ -843,7 +879,7 @@
 
 مدل فیزیکی سیمولینک با حل‌گر گسسته، گام ثابت $0.01\,\mathrm s$ و نرخ اسمی $100\,\mathrm{Hz}$ اجرا می‌شود. مسیر فعال، وضعیت دوربین و فرمان‌های موقعیت و جهت‌گیری را دریافت می‌کند، مرجع‌های مرتبه‌ی پنجم را می‌سازد، شش کنترل‌کننده‌ی فازی--\lr{PID} را اجرا می‌کند و پیچش مطلوب را به جریان تبدیل می‌نماید. مهم‌ترین رابط‌های مفهومی حلقه در جدول \ref{tab:method-ros-interfaces} آمده‌اند.
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
 	\centering
 	\scriptsize
 	\caption{رابط‌های مفهومی \lr{ROS~2} در حلقه‌ی فیزیکی}
@@ -927,7 +963,7 @@
 
 این روش نیروی قائم را در ترتیب حل اولویت می‌دهد، اما به علت برش مستقل کانال‌ها و مقیاس نهایی پس از ترکیب دو سهم، حفظ دقیق پیچش مرحله‌ی اول را تضمین نمی‌کند. بنابراین عنوان «تخصیص با اولویت شناوری» بیان دقیق‌تری از رفتار الگوریتم است.
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
 	\centering
 	\caption{قیود نهایی تخصیص جریان نمونه‌ی فیزیکی}
 	\label{tab:method-current-constraints-physical}
@@ -975,18 +1011,17 @@
 \label{sec:method-hmi-workflow}
 
 رابط کاربری تحت وب برای آن طراحی شد که راه‌اندازی سامانه به یک توالی قابل تکرار تبدیل شود. صفحه‌ی کنترل، تصویر دوربین، وضعیت گره بینایی، حالت ردیابی، وضعیت ارتباط سریال، مقدارهای وضعیت و مرجع، پیچش مطلوب و جریان‌های فرمانی را نمایش می‌دهد. از همین رابط می‌توان مبدأ وضعیت را ثبت کرد، تصحیح‌های هم‌راستایی را تغییر داد، هدف و مدت حرکت را تعیین کرد و فرمان توقف نرم‌افزاری فرستاد.
-
 \begin{figure}[htbp]
 	\centering
-	\fbox{\parbox[c][4.2cm][c]{0.75\textwidth}{\centering جای‌نگهدار تصویر رابط پایش و فرمان}}
+	\includegraphics[width=\linewidth]{img/physical/control_panel}
 	\caption{رابط کاربری برای پایش وضعیت، ارسال مرجع و اجرای توقف نرم‌افزاری}
 	\label{fig:method-hmi-placeholder}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	\fbox{\parbox[c][4.2cm][c]{0.75\textwidth}{\centering جای‌نگهدار عکس مدارهای راه‌انداز و الکترونیک کنترل}}
-	\caption{زنجیره‌ی الکترونیکی اجرای فرمان از رزبری‌پای تا مدارهای قدرت}
+	\includegraphics[width=\linewidth]{img/physical/circuit}
+	\caption{مدار درایور جریان سیم پیچ ها}
 	\label{fig:method-electronics-placeholder}
 \end{figure}
 
