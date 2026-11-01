@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1644" height="1024" viewBox="0 0 1644 1024" role="img"
+     aria-label="اجزای اصلی سکوی آزمایش">
+  <defs>
+    <marker id="tip" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1,1 L8,5 L1,9 Z" fill="#f3ae3b"/>
+    </marker>
+    <style>
+      .halo { fill: none; stroke: #ffffff; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; opacity: .9; }
+      .leader { fill: none; stroke: #f3ae3b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#tip); }
+      .badge { fill: #ffffff; stroke: #f3ae3b; stroke-width: 4; }
+      .number { fill: #183447; font: bold 28px Tahoma, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .key-number { fill: #183447; font: bold 24px Tahoma, sans-serif; text-anchor: middle; dominant-baseline: middle; }
+      .key-label { fill: #183447; font: 27px Tahoma, sans-serif; direction: rtl; unicode-bidi: plaintext; }
+      .heading { fill: #183447; font: bold 26px Tahoma, sans-serif; direction: rtl; unicode-bidi: plaintext; }
+    </style>
+  </defs>
+
+  <image x="0" y="0" width="1644" height="838" xlink:href="experimental_setup.jpg"/>
+
+  <g class="halo">
+    <path d="M116 108 L156 143 L188 188"/>
+    <path d="M598 112 L601 156 L618 207"/>
+    <path d="M1275 65 L1195 63 L1107 61"/>
+    <path d="M790 623 L881 637 L1019 665"/>
+    <path d="M922 418 L952 460 L1017 510"/>
+    <path d="M1515 496 L1460 558 L1358 646"/>
+  </g>
+  <g class="leader">
+    <path d="M116 108 L156 143 L188 188"/>
+    <path d="M598 112 L601 156 L618 207"/>
+    <path d="M1275 65 L1195 63 L1107 61"/>
+    <path d="M790 623 L881 637 L1019 665"/>
+    <path d="M922 418 L952 460 L1017 510"/>
+    <path d="M1515 496 L1460 558 L1358 646"/>
+  </g>
+
+  <g>
+    <circle class="badge" cx="105" cy="96" r="25"/><text class="number" x="105" y="97">۱</text>
+    <circle class="badge" cx="598" cy="100" r="25"/><text class="number" x="598" y="101">۲</text>
+    <circle class="badge" cx="1288" cy="65" r="25"/><text class="number" x="1288" y="66">۳</text>
+    <circle class="badge" cx="777" cy="622" r="25"/><text class="number" x="777" y="623">۴</text>
+    <circle class="badge" cx="911" cy="405" r="25"/><text class="number" x="911" y="406">۵</text>
+    <circle class="badge" cx="1527" cy="484" r="25"/><text class="number" x="1527" y="485">۶</text>
+  </g>
+
+  <rect x="0" y="838" width="1644" height="186" fill="#f7f9fa"/>
+  <path d="M0 838 H1644" stroke="#d8e0e5" stroke-width="2"/>
+  <text class="heading" x="1580" y="878" text-anchor="start" xml:lang="fa">اجزای اصلی سکوی آزمایش</text>
+
+  <g xml:lang="fa">
+    <circle class="badge" cx="1553" cy="927" r="18"/><text class="key-number" x="1553" y="928">۱</text>
+    <text class="key-label" x="1518" y="936" text-anchor="start">رایانه‌ی کنترل</text>
+    <circle class="badge" cx="1010" cy="927" r="18"/><text class="key-number" x="1010" y="928">۲</text>
+    <text class="key-label" x="975" y="936" text-anchor="start">نمایشگر رابط کاربری</text>
+    <circle class="badge" cx="480" cy="927" r="18"/><text class="key-number" x="480" y="928">۳</text>
+    <text class="key-label" x="445" y="936" text-anchor="start">دوربین و نگه‌دارنده</text>
+
+    <circle class="badge" cx="1553" cy="989" r="18"/><text class="key-number" x="1553" y="990">۴</text>
+    <text class="key-label" x="1518" y="998" text-anchor="start">استاتور و متحرک</text>
+    <circle class="badge" cx="1010" cy="989" r="18"/><text class="key-number" x="1010" y="990">۵</text>
+    <text class="key-label" x="975" y="998" text-anchor="start">فن خنک‌کاری</text>
+    <circle class="badge" cx="480" cy="989" r="18"/><text class="key-number" x="480" y="990">۶</text>
+    <text class="key-label" x="445" y="998" text-anchor="start">مدارهای راه‌انداز</text>
+  </g>
+</svg>

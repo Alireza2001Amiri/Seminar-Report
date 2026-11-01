@@ -352,6 +352,26 @@
 
 در آرایه‌ی واقعی، ابعاد محدود، قطعه‌بندی، اثرات انتهایی و خطای مونتاژ الگوی ایده‌آل میدان را تغییر می‌دهند \cite{wangThreedimensionalElectromagneticAnalytical2025}. اصلاح هندسه می‌تواند میدان مفید یا ریپل را بهبود دهد، اما ساخت و مونتاژ را حساس‌تر می‌کند. آرایه‌ی هالباخ شکافته در یک طراحی مشخص افزایش \(9.1\%\) چگالی رانش را نشان داده است \cite{wangAnalysisOptimizationMoving2025} و آرایه‌ی لانه‌زنبوری نیز در تحلیل و شبیه‌سازی، دامنه و اعوجاج میدان مطلوب‌تری ارائه کرده است \cite{yuHoneycombHalbachFlexible2024}. این نتایج به هندسه و معیارهای همان طراحی محدودند و برتری عمومی یک آرایش را اثبات نمی‌کنند.
 
+شکل \ref{fig:lit-halbach-2d-examples} دو نمایش از آرایه‌ی دوبعدی را نشان می‌دهد: جهت مغناطش قطعات و الگوی میدان در یک آرایش، و ساخت بخش متحرک از واحدهای آهنربایی تکرارشونده در آرایش دیگر.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[c]{0.36\textwidth}
+		\centering
+		\includegraphics[width=\linewidth,height=5cm,keepaspectratio]{img/halbach2D_2.png}
+
+		\small (الف) آرایش مغناطش و میدان
+	\end{minipage}\hfill
+	\begin{minipage}[c]{0.60\textwidth}
+		\centering
+		\includegraphics[width=\linewidth,height=5cm,keepaspectratio]{img/halbach2D_4.png}
+
+		\small (ب) بخش متحرک ساخته‌شده از واحدهای آهنربایی
+	\end{minipage}
+	\caption[دو نمایش از آرایه‌ی دوبعدی هالباخ]{آرایه‌ی دوبعدی هالباخ: (الف) آرایش مغناطش و میدان، به نقل از \cite{xuModularMaglevDesign2024d}؛ (ب) ساختار واحدی بخش متحرک، به نقل از \cite{ouIntelligentFeedforwardCompensation2020}.}
+	\label{fig:lit-halbach-2d-examples}
+\end{figure}
+
 \subsection{فناوری سیم‌پیچ و ساختار مکانیکی}
 \label{subsec:active_component_and_coils}
 \label{subsec:coil-mechanical-implementation}
@@ -425,6 +445,26 @@
 نمایش هارمونیکی و تحلیل فوریه از تناوب مکانی برای کاهش مرتبه استفاده می‌کنند و در تحلیل آرایه‌های آهنربا و موتورهای صفحه‌ای به کار رفته‌اند \cite{wangMagnetArrayPlanar2020,jansenModelingMagneticallyLevitated2007}. تعداد هارمونیک‌های حفظ‌شده، مصالحه‌ی میان هزینه‌ی محاسبات و بازنمایی مرزها یا نامنظمی‌ها را تعیین می‌کند. روش‌های زیرناحیه‌ای و شبکه‌ی مغناطیسی معادل نیز میان مدل بسته و مدل عددی قرار می‌گیرند \cite{liElectromagneticAnalysisAxialflux2024,wangElectromagneticPerformanceAnalysis2026,zhangNumericalModelingStructure2025}. روش کار مجازی، مسیر دیگری برای استخراج نیرو و گشتاور از انرژی سامانه است \cite{deboeijModelingIronlessPermanent2006}.
 
 روابط بسته سریع و تفسیرپذیرند، اما سرعت به‌تنهایی کافی نیست. برخی فرمول‌های دقیق میدان حلقه‌ی جریان در نواحی خاص از نظر عددی بدرفتارند و به بازنویسی پایدار نیاز دارند \cite{ortnerNumericallyStableComputationally2022}. ابزار \lr{Magpylib} نیز محاسبه‌ی سریع میدان هندسه‌های استاندارد را بدون مش‌بندی فراهم می‌کند و برای پیمایش پارامتری مناسب است \cite{ortnerMagpylibFreePython2020}. تطابق مدل تحلیلی هالباخ با اندازه‌گیری حسگر هال در نواحی دور از مرز گزارش شده است، اما نمونه‌برداری و اثرات انتهایی دامنه‌ی این تطابق را محدود می‌کنند \cite{ospanovaMagneticFieldSensing2025}.
+
+شکل \ref{fig:lit-harmonic-field-regions} نمونه‌ای از تقریب میدان با هارمونیک نخست و تقسیم آرایه‌ی محدود به نواحی مرکزی، کناری و گوشه‌ای را نشان می‌دهد. اختلاف تقریب با مدل میدان در نواحی انتهایی، اهمیت لحاظ‌کردن مرز آرایه را روشن می‌کند.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{minipage}[c]{0.53\textwidth}
+		\centering
+		\includegraphics[width=\linewidth,height=5.5cm,keepaspectratio]{img/harmonic_1.png}
+
+		\small (الف) مؤلفه‌های چگالی شار و تقریب هارمونیک نخست
+	\end{minipage}\hfill
+	\begin{minipage}[c]{0.43\textwidth}
+		\centering
+		\includegraphics[width=\linewidth,height=5.5cm,keepaspectratio]{img/harmonic_2.png}
+
+		\small (ب) نواحی مرکزی، کناری و گوشه‌ای
+	\end{minipage}
+	\caption[تقریب هارمونیکی میدان آرایه‌ی دوبعدی]{تقریب هارمونیکی میدان آرایه‌ی دوبعدی هالباخ و تقسیم‌بندی نواحی آرایه‌ی محدود، به نقل از \cite{xuModularMaglevDesign2024d}.}
+	\label{fig:lit-harmonic-field-regions}
+\end{figure}
 
 \label{subsec:numerical_modeling_validation}
 روش اجزای محدود\LTRfootnote{Finite Element Method (FEM)} جزئیات سه‌بعدی هندسه، مواد و اثرات انتهایی را بهتر حفظ می‌کند، ولی هزینه‌ی محاسباتی آن استفاده‌ی مستقیم در حلقه‌ی کنترل را محدود می‌سازد. نتیجه‌ی آن نیز به مش، شرایط مرزی و خواص ماده وابسته است؛ ازاین‌رو، مقایسه با \lr{FEM} اعتبارسنجی عددی است، نه جایگزین آزمایش. برای مثال، مدل گوشه‌های واقعی سیم‌پیچ مربعی با \lr{FEM} مقایسه شده و حذف این جزئیات، خطای قابل توجه نیرو ایجاد کرده است \cite{liFiniteElementModeling2025}. در نمونه‌ی فیزیکی ناکاتا و همکاران نیز تغییر ثابت نیروی عمودی بیش از مقدار پیش‌بینی‌شده‌ی \lr{FEM} بود که نقش تلرانس ساخت، مشخصات واقعی آهنربا و مونتاژ را نشان می‌دهد \cite{nakataCompensationFEMBased2026}.

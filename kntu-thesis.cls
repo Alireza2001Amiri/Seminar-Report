@@ -568,7 +568,7 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 		%% Single logo commands
 		\centerline{{\includegraphics[width=5cm]{logo-en}}}
 		\centerline{\textcolor[rgb]{0,0,0.5}{\bf \@latinuniversity}}
-		\centerline{\textcolor[rgb]{0,0,0.5}{\bfseries \small \@latinfaculty - \@latindepartment}}
+		\centerline{\textcolor[rgb]{0,0,0.5}{\bfseries \small \@latinfaculty\enspace--\enspace\@latindepartment}}
 		%% After logos
 		\centering
 		\vskip 1.5cm
@@ -671,7 +671,7 @@ Persian thesis document class in XeLaTeX for K. N. Toosi University of Technolog
 	% تعیین مشخصات فایل PDF
 	\hypersetup{
 		pdftitle={\@latintitle},
-		pdfauthor={\@latinname \@latinsurname},
+		pdfauthor={\@latinname\space\@latinsurname},
 		pdfsubject={Thesis in \@latinsubject},
 		pdfkeywords={\@latinkeywords},
 		pdfdirection={R2L}
